@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sea-war/static/css/main.2a62fb3f.chunk.css",
+    "main.js": "/sea-war/static/js/main.72d59917.chunk.js",
+    "main.js.map": "/sea-war/static/js/main.72d59917.chunk.js.map",
+    "runtime-main.js": "/sea-war/static/js/runtime-main.20e173be.js",
+    "runtime-main.js.map": "/sea-war/static/js/runtime-main.20e173be.js.map",
+    "static/js/2.b3ff4bd6.chunk.js": "/sea-war/static/js/2.b3ff4bd6.chunk.js",
+    "static/js/2.b3ff4bd6.chunk.js.map": "/sea-war/static/js/2.b3ff4bd6.chunk.js.map",
+    "index.html": "/sea-war/index.html",
+    "precache-manifest.a897791eb3ef598fce99cafc81c1c0fb.js": "/sea-war/precache-manifest.a897791eb3ef598fce99cafc81c1c0fb.js",
+    "service-worker.js": "/sea-war/service-worker.js",
+    "static/css/main.2a62fb3f.chunk.css.map": "/sea-war/static/css/main.2a62fb3f.chunk.css.map",
+    "static/js/2.b3ff4bd6.chunk.js.LICENSE.txt": "/sea-war/static/js/2.b3ff4bd6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20e173be.js",
+    "static/js/2.b3ff4bd6.chunk.js",
+    "static/css/main.2a62fb3f.chunk.css",
+    "static/js/main.72d59917.chunk.js"
+  ]
+}
