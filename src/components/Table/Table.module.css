@@ -1,0 +1,29 @@
+.message {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1dd1a1;
+    width: 100%;
+}
+.tableWrap {
+    display: inline-block;
+}
+.table {
+    margin: 0 auto;
+}
+.cell {
+    border: 5px solid #1dd1a1;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+.miss {
+    background-color: #48dbfb;
+}
+.hit {
+    background-color: #ff6b6b;
+}
+.sunk {
+    background-color: #702323;
+}

@@ -1,0 +1,9 @@
+.input {
+    color: #222f3e;
+    padding: 5px 15px;
+    border-radius: 10px;
+    outline: none;
+}
+.error {
+    border: 3px double #ff6b6b;
+}
