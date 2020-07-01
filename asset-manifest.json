@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sea-war/static/css/main.9f3710fd.chunk.css",
-    "main.js": "/sea-war/static/js/main.354f0868.chunk.js",
-    "main.js.map": "/sea-war/static/js/main.354f0868.chunk.js.map",
+    "main.js": "/sea-war/static/js/main.75491aab.chunk.js",
+    "main.js.map": "/sea-war/static/js/main.75491aab.chunk.js.map",
     "runtime-main.js": "/sea-war/static/js/runtime-main.20e173be.js",
     "runtime-main.js.map": "/sea-war/static/js/runtime-main.20e173be.js.map",
     "static/js/2.b3ff4bd6.chunk.js": "/sea-war/static/js/2.b3ff4bd6.chunk.js",
     "static/js/2.b3ff4bd6.chunk.js.map": "/sea-war/static/js/2.b3ff4bd6.chunk.js.map",
     "index.html": "/sea-war/index.html",
-    "precache-manifest.c6a1aa3b4a91766030c2d6e1473c940e.js": "/sea-war/precache-manifest.c6a1aa3b4a91766030c2d6e1473c940e.js",
+    "precache-manifest.f93dc56466b2a029b11f61ad9ddb4937.js": "/sea-war/precache-manifest.f93dc56466b2a029b11f61ad9ddb4937.js",
     "service-worker.js": "/sea-war/service-worker.js",
     "static/css/main.9f3710fd.chunk.css.map": "/sea-war/static/css/main.9f3710fd.chunk.css.map",
     "static/js/2.b3ff4bd6.chunk.js.LICENSE.txt": "/sea-war/static/js/2.b3ff4bd6.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.20e173be.js",
     "static/js/2.b3ff4bd6.chunk.js",
     "static/css/main.9f3710fd.chunk.css",
-    "static/js/main.354f0868.chunk.js"
+    "static/js/main.75491aab.chunk.js"
   ]
 }
