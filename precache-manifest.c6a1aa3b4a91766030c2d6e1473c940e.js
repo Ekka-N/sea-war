@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "20b57174dfbe037937a642b4523fd0db",
+    "revision": "b5ee2e8b956d089f4c89d63cb578e7fd",
     "url": "/sea-war/index.html"
   },
   {
-    "revision": "b50a502698ea5a3fc78a",
-    "url": "/sea-war/static/css/main.2a62fb3f.chunk.css"
+    "revision": "c71700a41555f9f93140",
+    "url": "/sea-war/static/css/main.9f3710fd.chunk.css"
   },
   {
     "revision": "f6636998faa8e598fde3",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sea-war/static/js/2.b3ff4bd6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b50a502698ea5a3fc78a",
+    "revision": "c71700a41555f9f93140",
     "url": "/sea-war/static/js/main.354f0868.chunk.js"
   },
   {
