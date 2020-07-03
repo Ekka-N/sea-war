@@ -2,7 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Table from '../Table/Table';
 import ResultWindow from '../ResultWindow/ResultWindow';
 
-const Game = ({ boardSize, shipLength, shipAmount }) => {
+const Game = ({ boardSize }) => {
+
+  const shipsData = [
+    { shipLength: 4, amount: 1 },
+    { shipLength: 3, amount: 2 },
+    { shipLength: 2, amount: 3 },
+    { shipLength: 1, amount: 4 },
+  ]
 
   const [hitView, setHitView] = useState([]);
   const [missView, setMissView] = useState([]);
@@ -10,21 +17,112 @@ const Game = ({ boardSize, shipLength, shipAmount }) => {
   const [message, setMessage] = useState('Нажми на клетку, чтобы сделать выстрел');
   let [shipsSunk, setShipsSunk] = useState(0);
   const [endGame, setEndGame] = useState(false);
+
+  const findStopPoints = (shipLocation, direction) => {
+    let newStopPoints = [...shipLocation];
   
+    shipLocation.forEach( (point, i) => {
+      let numToChange = direction === 1 ? point[0] : point[1];
+      
+      if (numToChange > 0) {
+        const arr = point.split('');
+        direction === 1 ? --arr[0] : --arr[1];
+        newStopPoints.push(arr.join(''));
+      }
+      
+      if (numToChange < boardSize-1) {      
+        const arr = point.split('');
+        direction === 1 ? ++arr[0] : ++arr[1];
+        newStopPoints.push(arr.join(''));
+      }
+      
+      // работа с первой клеткой корабля
+      if (i === 0) {
+        if (direction === 1) { 
+          const arr = point.split('');
+          if (point[1] > 0) {
+            arr[1] = point[1] - 1;
+            newStopPoints.push(arr.join(''));
+            if (point[0] > 0) {
+              arr[0] = point[0] - 1;
+              newStopPoints.push(arr.join(''));  
+            }              
+            if (point[0] < boardSize-1) {
+              arr[0] = +point[0] + 1;
+              newStopPoints.push(arr.join(''));
+            }      
+          }      
+          
+        } else {
+          const arr = point.split('');
+          if (point[0] > 0) {
+            --arr[0];
+            newStopPoints.push(arr.join(''));
+             if (point[1] < boardSize-1) {
+              ++arr[1];        
+              newStopPoints.push(arr.join(''));           
+            } 
+            if (point[1] > 0) {
+              arr[1] = point[1] - 1; 
+              newStopPoints.push(arr.join(''));
+             }
+           }
+        }
+      };
+
+      // работа с последней клеткой корабля
+      if (i === shipLocation.length - 1) {
+        if (direction === 1) { 
+          const arr = point.split('');
+          if (point[1] < boardSize-1) {
+            arr[1] = +point[1] + 1;
+            newStopPoints.push(arr.join(''));
+            if (point[0] < boardSize-1) {
+              arr[0] = +point[0] + 1;
+              newStopPoints.push(arr.join(''));  
+            }              
+            if (point[0] > 0) {
+              arr[0] = point[0] - 1;
+              newStopPoints.push(arr.join(''));
+            }      
+          } 
+          
+        } else {
+          const arr = point.split('');
+          if (arr[0] < boardSize-1) {
+            ++arr[0];
+            newStopPoints.push(arr.join(''));
+            
+             if (point[1] < boardSize-1) {
+              ++arr[1];        
+              newStopPoints.push(arr.join(''));   
+            } 
+            if (point[1] > 0) {
+              arr[1] = point[1] - 1; 
+              newStopPoints.push(arr.join(''));
+             }
+           }
+        }
+      }; 
+    });
+    
+    return newStopPoints;
+  };
+     
   // проверка пересечений кораблей
   const collision = (shipsArr, location) => {
     for (let i = 0; i < shipsArr.length; i++) {
-     for (let j = 0; j < location.length; j++) {
-         if (shipsArr[i].locations.indexOf(location[j]) >= 0) {
-             return true;
-         }
-       }
-    }
+      const stopArr = findStopPoints(shipsArr[i].locations, shipsArr[i].direction);
+      for (let j = 0; j < location.length; j++) {
+          if (stopArr.indexOf(location[j]) >= 0) {
+              return true;
+          }
+        }
+      }
     return false;
  };
 
-  const generateShipLocations = () => {
-    const direction = Math.floor(Math.random() * 2);  // 1 - горизонтальный корабль, 0 - вертикальный
+  const generateShipLocations = (shipLength, direction) => {
     let row, col;
     
     // генерация начальной позиции корабля
@@ -47,22 +145,29 @@ const Game = ({ boardSize, shipLength, shipAmount }) => {
 
   const generateShips = () => {
     const newShips = [];
+    const direction = Math.floor(Math.random() * 2);  // 1 - горизонтальный корабль, 0 - вертикальный
 
-    for (let i = 0; i < shipAmount; ++i) {
-      const newLocations = generateShipLocations();
-      if (!collision(newShips, newLocations)) {
-        const newShip = { locations: newLocations, isSunk: false};
-        newShips.push(newShip);
-      } else i--;
-    };
-    
+    shipsData.forEach(shipData => {
+      for (let i = 0; i < shipData.amount; ++i) {
+        const newLocations = generateShipLocations(shipData.shipLength, direction);
+        if (!collision(newShips, newLocations)) {
+          const newShip = { 
+            locations: newLocations,
+            isSunk: false,
+            direction: direction
+          };
+          newShips.push(newShip);
+        } else i--;
+      };
+    });
+
     return newShips;
   };  
   
   const [ships, setShips] = useState(generateShips());
 
   const isHit = id => {
-    const result = ships.some( ship => {
+    const result = ships.some(ship => {
       if (ship.locations.indexOf(id) !== -1) {
         const newArr = [...hitView];
         newArr.push(id);

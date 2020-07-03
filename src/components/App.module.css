@@ -10,7 +10,11 @@
     letter-spacing: .15em;
 }
 .title {
-    font-size: 2em;
+    font-size: 3em;
+}
+.subtitle {
+    font-weight: bold;
+    font-size: 1.4em;
 }
 .wrap {
     display: flex;
@@ -20,38 +24,14 @@
     min-height: 100vh;
     margin: 0 auto;
 }
-.inputsWrap {
-    display: flex;
-    flex-direction: column;
+.infoWrap {
     margin-bottom: 30px;
 }
-.inputsWrap > p {
-    margin: 10px 0;
+.text {
+    margin: .5em 0;
 }
 .startWindow {
     position: relative;
-}
-.errorMessage {
-    display: inline-block;
-    background-color: #ff6b6b;
-    padding: 10px;
-    border-radius: 10px;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    z-index: 2;
-}
-.errorMessage::before {
-    content: '';
-    display: block;
-    width: 15px;
-    height: 15px;
-    transform: rotate(45deg);
-    background-color: #ff6b6b;
-    position: absolute;
-    bottom: -4px;
-    left: 10px;
-    z-index: 0;
 }
 
 @media (max-width: 350px) {
