@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/sea-war/static/css/main.9f3710fd.chunk.css",
-    "main.js": "/sea-war/static/js/main.75491aab.chunk.js",
-    "main.js.map": "/sea-war/static/js/main.75491aab.chunk.js.map",
+    "main.css": "/sea-war/static/css/main.411e0109.chunk.css",
+    "main.js": "/sea-war/static/js/main.73a6708a.chunk.js",
+    "main.js.map": "/sea-war/static/js/main.73a6708a.chunk.js.map",
     "runtime-main.js": "/sea-war/static/js/runtime-main.20e173be.js",
     "runtime-main.js.map": "/sea-war/static/js/runtime-main.20e173be.js.map",
-    "static/js/2.b3ff4bd6.chunk.js": "/sea-war/static/js/2.b3ff4bd6.chunk.js",
-    "static/js/2.b3ff4bd6.chunk.js.map": "/sea-war/static/js/2.b3ff4bd6.chunk.js.map",
+    "static/js/2.7247be1c.chunk.js": "/sea-war/static/js/2.7247be1c.chunk.js",
+    "static/js/2.7247be1c.chunk.js.map": "/sea-war/static/js/2.7247be1c.chunk.js.map",
     "index.html": "/sea-war/index.html",
-    "precache-manifest.f93dc56466b2a029b11f61ad9ddb4937.js": "/sea-war/precache-manifest.f93dc56466b2a029b11f61ad9ddb4937.js",
+    "precache-manifest.51478d30dd880000ca24a2ce90b74677.js": "/sea-war/precache-manifest.51478d30dd880000ca24a2ce90b74677.js",
     "service-worker.js": "/sea-war/service-worker.js",
-    "static/css/main.9f3710fd.chunk.css.map": "/sea-war/static/css/main.9f3710fd.chunk.css.map",
-    "static/js/2.b3ff4bd6.chunk.js.LICENSE.txt": "/sea-war/static/js/2.b3ff4bd6.chunk.js.LICENSE.txt"
+    "static/css/main.411e0109.chunk.css.map": "/sea-war/static/css/main.411e0109.chunk.css.map",
+    "static/js/2.7247be1c.chunk.js.LICENSE.txt": "/sea-war/static/js/2.7247be1c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.20e173be.js",
-    "static/js/2.b3ff4bd6.chunk.js",
-    "static/css/main.9f3710fd.chunk.css",
-    "static/js/main.75491aab.chunk.js"
+    "static/js/2.7247be1c.chunk.js",
+    "static/css/main.411e0109.chunk.css",
+    "static/js/main.73a6708a.chunk.js"
   ]
 }
