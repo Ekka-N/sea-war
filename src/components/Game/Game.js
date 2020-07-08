@@ -145,10 +145,10 @@ const Game = ({ boardSize }) => {
 
   const generateShips = () => {
     const newShips = [];
-    const direction = Math.floor(Math.random() * 2);  // 1 - горизонтальный корабль, 0 - вертикальный
-
+    
     shipsData.forEach(shipData => {
       for (let i = 0; i < shipData.amount; ++i) {
+        const direction = Math.floor(Math.random() * 2);  // 1 - горизонтальный корабль, 0 - вертикальный
         const newLocations = generateShipLocations(shipData.shipLength, direction);
         if (!collision(newShips, newLocations)) {
           const newShip = { 
